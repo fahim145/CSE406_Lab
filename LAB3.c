@@ -48,15 +48,13 @@ int main() {
                 done++;
             }
 
-            // Check again for new arrivals during this time
+         
             for (int i = 0; i < n; i++) {
                 if (at[i] <= time && rt[i] > 0 && visited[i] == 0) {
                     queue[rear++] = i;
                     visited[i] = 1;
                 }
             }
-
-            // If not done, requeue
             if (rt[p] > 0) {
                 queue[rear++] = p;
             }
